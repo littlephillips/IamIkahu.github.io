@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Birthday Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="landing-page" class="page active">
+        <h1>Purity Ikahu's World🌎</h1>
+        <button id="start-button">Start</button>
+    </div>
+    
+    <div id="message-page" class="page hidden">
+        <h2>Backstory 🫣</h2>
+        <div class="message">
+            <p>Phill couldn't sing Happy birthday-song</p>
+            <p>So He created this!!</p>
+        </div>
+
+        <div id="puzzle">Click Here To Solve the Puzzle</div>
+        
+        <p class="tip">Hint: Her First Name</p>
+
+        <div id="letter-container" class="hidden">
+            <div id="letters"></div>
+            <input type="text" id="name-input" placeholder="Type the name here" readonly>
+            <button id="undo-button">Undo</button>
+            <button id="submit-name">Submit</button>
+        </div>
+        <p id="wrong-counter" class="hidden">Wrong attempts: <span id="wrong-count">0</span></p> 
+        
+        <button id="back-button-puzzle" class="back-button">Back</button>
+
+    </div>
+
+    <div id="gallery-page" class="page hidden">
+        <h2>cam's corner 📷</h2>
+
+        <audio id="birthday-song" controls>
+            <source src="./assets/expresso.mp3" type="audio/mpeg" loop="true">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <div class="gallery">
+            <img src="./assets/a.jpeg" alt="Photo 1">
+            <img src="./assets/b.jpeg" alt="Photo 2">
+            <img src="./assets/c.jpeg" alt="Photo 3">
+            <img src="./assets/d.jpeg" alt="Photo 4">
+            <img src="./assets/e.jpeg" alt="Photo 5">
+            <img src="./assets/f.jpeg" alt="Photo 6">
+            <img src="./assets/g.jpeg" alt="Photo 7">
+            <img src="./assets/h.jpeg" alt="Photo 8">
+            <img src="./assets/i.jpeg" alt="Photo 9">
+            <img src="./assets/j.jpeg" alt="Photo 10">
+            <img src="./assets/k.jpeg" alt="Photo 11">
+
+            <img src="./assets/l.jpeg" alt="Photo 1">
+            <img src="./assets/m.jpeg" alt="Photo 2">
+            <img src="./assets/n.jpeg" alt="Photo 3">
+            <img src="./assets/o.jpeg" alt="Photo 4">
+            <img src="./assets/p.jpeg" alt="Photo 3" >
+            <img src="./assets/q.jpeg" alt="Photo 3">
+            <img src="./assets/r.jpeg" alt="Photo 7">
+            <img src="./assets/s.jpeg" alt="Photo 8">
+            <img src="./assets/t.jpeg" alt="Photo 9">
+            <img src="./assets/u.jpeg" alt="Photo 10">
+            <img src="./assets/v.jpeg" alt="Photo 11">
+
+            <img src="./assets/w.jpeg" alt="Photo 1">
+            <img src="./assets/x.jpeg" alt="Photo 3">
+            <img src="./assets/y.jpeg" alt="Photo 3">
+            <img src="./assets/z.jpeg" alt="Photo 4">
+            <img src="./assets/zz.jpeg" alt="Photo 3">
+            <img src="./assets/zzz.jpeg" alt="Photo 6">
+
+        </div>
+        <button id="back-button-gallery" class="back-button">Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

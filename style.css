@@ -1,0 +1,295 @@
+/* General body styles */
+body {
+    font-family: 'Lora', serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    width: auto;
+}
+
+
+/* Page container styles */
+.page {
+    flex-direction: column;
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    width: 90%; /* Use a percentage width for responsiveness */
+    max-width: 600px; /* Limit the maximum width for larger screens */
+    min-width: 300px; /* Set a minimum width for smaller screens */
+    height: auto;
+    padding: 20px;
+    margin: 10px auto; /* Center the container horizontally */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+.page.active {
+    display: flex;
+}
+
+/* Heading styles */
+h1, h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+/* Buttons styles */
+button {
+    background: #007BFF;
+    font-size: 16px;
+    color: aliceblue;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    width: auto;
+    transition: background 0.3s;
+    box-sizing: border-box;
+}
+
+
+button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 5px 8px 10px rgba(249, 8, 225, 0.2);
+}
+
+
+button.back-button {
+    margin-top: 20px;
+}
+
+/* Message styles */
+.message {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Gallery styles */
+
+.gallery {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    overflow-y: auto;
+}
+
+.gallery img {
+    width: calc(33.333% - 20px); /* Adjusts the width to fit three images per row, with space for the gap */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.gallery img.active {
+    transform: scale(1.5);
+}
+
+.gallery img.dimmed {
+    opacity: 0.5;
+}
+
+/* Puzzle button styles */
+
+#puzzle {
+    background:#28a745;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: aliceblue;
+    font-size: 16px;
+    cursor:pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+#puzzle:hover {
+    background: #218838;
+}
+
+
+/* Letter container styles */
+#letter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    width: 90%; /* Adjust the width for responsiveness */
+    max-width: 600px; /* Limit the maximum width for larger screens */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+#letters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    width: 100%; /* Make sure the letters container takes full width */
+    max-width: 100%; /* Ensure it doesn't overflow on smaller screens */
+}
+
+.letter-button {
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background: #0870cb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.letter-button:hover {
+    background: #0056b3;
+}
+
+
+
+/* Input styles */
+#name-input {
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    width: calc(100% - 24px);
+    box-sizing: border-box;
+    margin: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 5px 15px rgba(47, 239, 4, 0.692);
+}
+
+
+
+/* Wrong counter styles */
+#wrong-counter {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #d70e0e;
+}
+
+/* Hidden elements */
+.hidden {
+    display: none;
+}
+
+/* Audio player styles */
+
+#birthday-song {
+    margin: 5px;
+}
+
+#birthday-song audio {
+    width: 100%;
+    max-width: 300px; /* Adjust the max-width as needed */
+    border-radius: 5px;
+    background-color: #d71212;
+    box-shadow: 0 2px 4px rgba(98, 224, 8, 0.1);
+}
+
+#birthday-song audio::-webkit-media-controls-panel {
+    background-color: #007BFF; /* Background color of the audio controls */
+    border-radius: 5px;
+}
+
+#birthday-song audio::-webkit-media-controls-play-button {
+    color: #2f0ed4; /* Color of the play button */
+}
+
+#audio-player audio::-webkit-media-controls-timeline {
+    background-color: #6cc9d9; /* Background color of the timeline */
+    height: 5px; /* Height of the timeline */
+}
+
+#audio-player audio::-webkit-media-controls-current-time-display,
+#audio-player audio::-webkit-media-controls-time-remaining-display {
+    color: #8c4141; /* Color of the current time and time remaining text */
+}
+
+#audio-player audio::-webkit-media-controls-volume-slider {
+    background-color: #fff; /* Background color of the volume slider */
+    height: 5px; /* Height of the volume slider */
+}
+
+#audio-player audio::-webkit-media-controls-mute-button {
+    color: #fff; /* Color of the mute button */
+}
+
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .gallery img {
+        width: calc(50% - 20px); /* Two images per row on medium screens */
+    }
+
+    button, #puzzle, audio {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .page {
+        width: 90%;
+        height: auto;
+    }
+
+    .letter-button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    
+    .message {
+        font-size: 16px;
+    }
+    .gallery img {
+        width: calc(100% - 20px); /* One image per row on small screens */
+    }
+
+    #letters {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .letter-button {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
